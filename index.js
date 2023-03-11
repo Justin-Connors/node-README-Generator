@@ -9,27 +9,27 @@ inquirer
             name: 'readmeTitle'
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'What would you like the description of your README be? Close the editor when you are done, ',
             name: 'readmeDescription'
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'What would you like the installation instructions be for your README? Close the editor when you are done, ',
             name: 'readmeInstall'
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'What would you like to add for usage to the README? Close the editor when you are done, ',
             name: 'readmeUsage'
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'What would you like to add for the contribution guidelines to the README? Close the editor when you are done, ',
             name: 'readmeCont'
         },
         {
-            type: 'input',
+            type: 'editor',
             message: 'What would you like to add for tests to the README? Close the editor when you are done, ',
             name: 'readmeTests'
         },
@@ -62,7 +62,32 @@ inquirer
         const license = response.readmeLicense;
 
         fs.appendFile('newRead/README.md', 
-        `# ${title}\n## Description\n${desc}\n## Installation\n${readmeInst}\n## Usage\n${usage}\n## Contribution guidelines\n${cont}\n## Tests\n${tests}\n## Questions!\nHere's my GitHub: ${username}\nHere's my Email: ${email}\n## License\n${license}`, 
+        `
+# ${title}\n
+## Table of Contents\n
+[Description](#${desc})\n
+[Installation](#${readmeInst})\n
+[Usage](#${usage})\n
+[Contribution Guidelines](#${cont})\n
+[Tests](#${tests})\n
+[Questions](#Questions?)\n
+[License(s)](#${license})\n
+## Description\n
+${desc}\n
+## Installation\n
+${readmeInst}\n
+## Usage\n
+${usage}\n
+## Contribution guidelines\n
+${cont}\n
+## Tests\n
+${tests}\n
+## Questions?\n
+Here's my GitHub: https://github.com/${username}\n
+Here's my Email: ${email}\n
+## License\n
+${license}
+        `, 
         (err) => {
             if (err) {
                 console.log(err);
