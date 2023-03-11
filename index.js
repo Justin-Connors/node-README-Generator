@@ -60,7 +60,7 @@ inquirer
         const username = response.readmeUsername;
         const email = response.readmeEmail;
         const license = response.readmeLicense;
-        const licenseBadge = `![License](https://img.shields.io/badge/license-${response.readmeLicense}-blue.svg)`;
+        const licenseBadge = `![License](https://img.shields.io/badge/license-${license}-blue.svg)`;
 
         fs.appendFile('newRead/README.md', 
         `
