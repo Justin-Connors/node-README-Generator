@@ -60,11 +60,13 @@ inquirer
         const username = response.readmeUsername;
         const email = response.readmeEmail;
         const license = response.readmeLicense;
+        const licenseBadge = `![License](https://img.shields.io/badge/license-${response.readmeLicense}-blue.svg)`;
 
         fs.appendFile('newRead/README.md', 
         `
 # ${title}\n
 ## Table of Contents\n
+${licenseBadge}\n
 [Description](#${desc})\n
 [Installation](#${readmeInst})\n
 [Usage](#${usage})\n
@@ -84,7 +86,7 @@ ${cont}\n
 ${tests}\n
 ## Questions?\n
 Here's my GitHub: https://github.com/${username}\n
-Here's my Email: ${email}\n
+Here's my Email: [${email}](mailto:${email})\n
 ## License\n
 ${license}
         `, 
