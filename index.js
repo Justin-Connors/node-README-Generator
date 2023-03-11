@@ -8,33 +8,33 @@ inquirer
             name: 'readmeTitle'
         },
         {
-            type: 'input',
-            message: 'What would you like the description of your README be?',
+            type: 'editor',
+            message: 'What would you like the description of your README be? Close the editor when you are done',
             name: 'readmeDescription'
         },
         {
-            type: 'input',
-            message: 'What would you like the installation instructions be for your README?',
+            type: 'editor',
+            message: 'What would you like the installation instructions be for your README? Close the editor when you are done',
             name: 'readmeInstall'
         },
         {
-            type: 'input',
-            message: 'What would you like to add for usage to the README?',
+            type: 'editor',
+            message: 'What would you like to add for usage to the README? Close the editor when you are done',
             name: 'readmeUsage'
         },
         {
-            type: 'input',
-            message: 'What would you like to add for the contribution guidelines to the README?',
+            type: 'editor',
+            message: 'What would you like to add for the contribution guidelines to the README? Close the editor when you are done',
             name: 'readmeCont'
         },
         {
-            type: 'input',
-            message: 'What would you like to add for tests to the README?',
+            type: 'editor',
+            message: 'What would you like to add for tests to the README? Close the editor when you are done',
             name: 'readmeTests'
         }
     ])
     .then((response) => {
-        
+
     })
     .catch((err) => {
         if(err.isTtyError) {
