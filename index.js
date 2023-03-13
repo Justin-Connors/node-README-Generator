@@ -34,12 +34,12 @@ inquirer
             name: 'readmeTests'
         },
         {
-            type: 'input;',
+            type: 'input',
             message: 'Enter your GitHub username',
             name: 'readmeUsername'
         },
         {
-            type: 'input;',
+            type: 'input',
             message: 'Enter your contact Email address',
             name: 'readmeEmail'
         },
