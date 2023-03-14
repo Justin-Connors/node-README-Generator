@@ -11,6 +11,3 @@ In your terminal run ```npm install```
 Now that you should have the packages/modules required for the application you can run the following command inside your terminal ```node index.js```<br />
 Now go through the prompts and a readme file will be generated at the end inside the newRead folder titled `README.md`
 
-## Editor ~ How to Use
-The editor should automatically choose your systems default editor. You can then paste or type in what you want to add in the editor, when done go to file -> save or press `ctrl + s` and close the editor.
-
