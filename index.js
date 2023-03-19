@@ -67,7 +67,7 @@ function readMeGen() {
             {
                 type: 'list',
                 message: 'What license(s) would you like to add',
-                choices: ['MIT', 'ACADEMIC_FREE', 'ECLIPSE_PUBLIC_1.0', 'Eclipse_Public_2.0', 'ISC', 'Microsoft Public'],
+                choices: ['MIT', 'Academic_Free', 'Eclipse_Public_1.0', 'Eclipse_Public_2.0', 'ISC', 'Microsoft_Public'],
                 name: 'readmeLicense'
             }
         ])
@@ -82,26 +82,28 @@ function readMeGen() {
             const email = response.readmeEmail;
             const license = response.readmeLicense;
             const licenseBadge = `![License](https://img.shields.io/badge/license-${license}-blue.svg)`;
+            const underScore = /_/g;
+            const underScoreReplace = ' ';
 
             fs.appendFile('newRead/README.md', 
         `
 # ${title}\n
 ## Table of Contents\n
 ${licenseBadge}\n
-[Description](#${desc})\n
-[Installation](#${readmeInst})\n
-[Usage](#${usage})\n
-[Contribution Guidelines](#${cont})\n
-[Tests](#${tests})\n
+[Description](#Description)\n
+[Installation](#Installation)\n
+[Usage](#Usage)\n
+[Contribution](#Contribution)\n
+[Tests](#Tests)\n
 [Questions](#Questions?)\n
-[License(s)](#${license})\n
+[License(s)](#License)\n
 ## Description\n
 ${desc}\n
 ## Installation\n
 ${readmeInst}\n
 ## Usage\n
 ${usage}\n
-## Contribution guidelines\n
+## Contribution\n
 ${cont}\n
 ## Tests\n
 ${tests}\n
@@ -109,7 +111,7 @@ ${tests}\n
 Here's my GitHub: https://github.com/${username}\n
 Here's my Email: [${email}](mailto:${email})\n
 ## License\n
-${license}
+${license.replace(underScore, underScoreReplace)}
         `, 
             (err) => {
                 if (err) {
