@@ -1,5 +1,5 @@
 
-# ghjghj
+# My README
 
 ## Table of Contents
 
@@ -21,29 +21,29 @@
 
 ## Description
 
-ghjghj
+Some description
 
 ## Installation
 
-ghjghj
+some instructions
 
 ## Usage
 
-ghjghj
+some usage
 
 ## Contribution
 
-ghjghj
+some contribution stuff
 
 ## Tests
 
-ghjghj
+heres some tests
 
 ## Questions?
 
-Here's my GitHub: https://github.com/gghjgh
+Here's my GitHub: https://github.com/myname
 
-Here's my Email: [jghjg](mailto:jghjg)
+Here's my Email: [email@email.com](mailto:email@email.com)
 
 ## License
 

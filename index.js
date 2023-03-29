@@ -84,7 +84,7 @@ function readMeGen() {
             const licenseBadge = `![License](https://img.shields.io/badge/license-${license}-blue.svg)`;
             const underScore = /_/g;
             const underScoreReplace = ' ';
-
+            //Templated String for README
             fs.appendFile('newRead/README.md', 
         `
 # ${title}\n
